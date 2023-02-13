@@ -1,0 +1,116 @@
+:root{
+    --black: #222222;
+    --white: #F3EFE0;
+    --grey: #434242;
+    --blue: #22A39F;
+  }
+
+  .last{
+    flex-direction: column;
+  }
+
+  .last-main-container{
+    display: none;
+  }
+
+
+  .footer-container{
+    display: flex;
+    opacity: 0;
+    flex-direction: row;
+    font-size: 16px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 60rem;
+    color: var(--white);
+    line-height: 140%;
+    flex-wrap: row wrap;
+    animation: fadeUp 0.6s linear forwards;
+    animation-delay: 0.6s;
+
+  }
+
+  .footer-container h5{
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+
+  .contact , .follow, .adresse{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-top: 3rem;
+
+  }
+
+  .footer-container a{
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  .header-container{
+    width: 75%;
+  }
+
+  .header-container h2{
+    font-size: 40px;
+    color: var(--white);
+    animation: fadeIn 0.6s linear forwards;
+  }
+
+
+  .header-container h6{
+    font-size: 26px;
+    color: var(--white);
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 0.6s linear forwards;
+    animation-delay: 0.4s;
+  }
+
+  .last-active{
+    display: block;
+  }
+
+
+
+
+  @keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+  }
+  @keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+  }
+  @keyframes fadeOut{
+    from{
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+    to{
+        opacity: 0;
+        transform: translateY(50px);
+
+    }
+  }
+
+
+

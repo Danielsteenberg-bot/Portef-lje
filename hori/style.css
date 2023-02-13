@@ -1,0 +1,166 @@
+      :root{
+        --black: #222222;
+        --white: #F3EFE0;
+        --grey: #434242;
+        --blue: #22A39F;
+      }
+
+      @font-face{
+        font-family: pixelFont;
+        src: url(Raleway-VariableFont_wght.ttf);
+      }
+      
+      *{
+        padding: 0;
+        margin: 0;
+        font-family: pixelFont;
+        box-sizing: border-box;
+
+
+      }
+      
+
+
+      main {
+        overflow-x: hidden;
+        display: flex;
+
+
+      }
+      
+      h1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 65%;
+        align-items: center;
+        font-size: 32;
+        line-height: 140%;
+        color: var(--white);
+        position: relative;
+        margin: auto;
+
+      }
+      
+      section {
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4ch;
+        background-color: var(--black);
+        background-attachment: fixed;
+      }
+      
+      
+
+      .landing-logo-container{
+        background-color: var(--black);
+        display: flex;
+        align-items: center;
+        height: 20vh;
+        margin: 1rem;
+        position: fixed;
+        left: 50px;
+        top: 0px;
+      }
+
+      .landing-logo-container img{
+        width: 10%;      
+      }
+
+      .landing-logo-container h2{
+        font-size: 30px;
+        padding: 0 20px;
+        color: var(--white);
+
+        
+      }
+
+      .landing-txt-container{
+
+        transition: transform 1s  cubic-bezier(0.17, 0.84, 0.44, 1);
+      }
+
+
+
+
+
+      /* Undersider */
+
+      .website-wrapper{
+        z-index: 111;
+        position: relative;
+        transition: transform 1s  cubic-bezier(0.17, 0.84, 0.44, 1);
+
+      }
+
+      .website-wrapper h2{
+        color: var(--white);
+        font-size: 4rem;
+      }
+
+      .website-wrapper h6{
+        color: var(--white);
+        font-size: 1.5rem;
+        width: 60%;
+      }
+
+      .website-wrapper img{
+        width: 20%;
+        margin: 2rem;
+      }
+
+
+
+      .website-logo-container {
+        display: flex;
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+
+
+
+      .parallax-layer1 {
+        height: 400px;
+        width: 300px;
+        position: relative;
+        top: 20;
+        left: 10;
+        transition: transform 1s  cubic-bezier(0.17, 0.84, 0.44, 1);
+
+      }
+      .parallax-layer2 {
+        height: 250px;
+        width: 500px;
+        position: relative;
+        top: 20;
+        left: 50%;
+        transition: transform 1s  cubic-bezier(0.17, 0.84, 0.44, 1);
+
+        
+      }
+
+      .para1{
+        background-image: url(../assets/img/website-long.jpg);
+        transition: all .6s  cubic-bezier(0.17, 0.84, 0.44, 1);
+        scroll-behavior: smooth;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+      }
+      .para2{
+        background-image: url(../assets/img/website-wide.jpg);
+        transition: all 2s ease;
+        transition: all .6s cubic-bezier(0.17, 0.84, 0.44, 1);
+        scroll-behavior: smooth;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+      }
