@@ -97,3 +97,9 @@ main{
   right: 5%;
   height: 400px;
 }
+.about-img-2{
+  height: 50%;
+  position: relative;
+  right: 7%;
+  top: 40%;
+}

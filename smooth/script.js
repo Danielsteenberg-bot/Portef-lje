@@ -1,8 +1,4 @@
-
-
-
-
-let sections = [...document.querySelectorAll(".img")];
+let sections = [...document.querySelectorAll(".sections")];
 let slider = document.querySelector(".slider");
 
 let sliderWidth;
@@ -42,9 +38,46 @@ function animateImages(){
   sections.forEach((image, idx) =>{
     intersectionRatioValue = ratio - (idx * 0.7);
     setTransform(image, `translateX(${intersectionRatioValue * 70})px`)
+
   })
 }
 
+
+let items = document.querySelectorAll(".item");
+
+
+
+window.addEventListener("scroll", () =>{
+
+  console.log(items[0].getBoundingClientRect().left)
+
+  if(items[0].getBoundingClientRect().left < -300){
+  console.log("out")
+  items[0].classList.add("fadeOut")
+  items[0].classList.remove("fadeIn")
+  }
+
+  if(items[0].getBoundingClientRect().left < 0){
+  console.log("in")
+  items[0].classList.add("fadeIn")
+  items[0].classList.remove("fadeOut")
+
+  }
+
+  
+})
+
+
+
+
+/* console.log(sections)
+
+for(i = 0; i < sections.length; i++){
+  let sectionLeft = sections[i].getBoundingClientRect().left;
+  console.log(sectionLeft)
+
+
+} */
 
 init();
 animate()
