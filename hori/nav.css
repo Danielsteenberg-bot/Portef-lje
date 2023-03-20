@@ -1,8 +1,30 @@
+.landing-logo-container{
+  display: flex;
+  align-items: center;
+  height: 20vh;
+  margin: 1rem;
+  position: fixed;
+  left: 50px;
+  top: 0px;
+}
+
+.landing-logo-container img{
+  width: 10%;      
+}
+
+.landing-logo-container h2{
+  font-size: 30px;
+  padding: 0 20px;
+  color: var(--white);
+
+  
+}
+
 .navbar {
   display: flex;
   background-color: #333;
   overflow: hidden;
-  width: 60%;
+  width: 40%;
   border-radius: 50px;
   position: fixed;
   bottom: 70px;

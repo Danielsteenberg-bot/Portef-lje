@@ -1,18 +1,99 @@
-.scroll-container {
-  width: 100%;
-  overflow-x: scroll;
-  white-space: nowrap; /* prevent line breaks in content */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.scroll-content {
-  display: inline-block;
+body{
+  background-color: black;
+  overscroll-behavior: none;
 }
 
-.scroll-item {
-  display: inline-block;
-  margin-right: 20px; /* add some spacing between items */
-  width: 1000px;
-}
-img{
+main{
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100vh;
+}
+
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6000px;
+  height: 100%;
+  transition: transform .6s  cubic-bezier(.25, .46, .45, .94);
+
+}
+
+.slider-inner{
+  position: absolute;
+  top: 15%;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item{
+  position: relative;
+  width: 800px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.item h1{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 65%;
+  align-items: center;
+  font-size: 32px;
+  line-height: 140%;
+  color: var(--white);
+  position: relative;
+  margin: auto;
+}
+
+.sections{
+  position: absolute;
+  width: 800px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.about-txt-container{
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-txt-wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.about-txt-head{
+  font-size: 62px;
+}
+
+.about-txt-para{
+  line-height: 2;
+  font-size: 22px;
+  margin-right: 1rem;
+}
+
+.about-img-1{
+  position: relative;
+  right: 5%;
+  height: 400px;
 }

@@ -59,28 +59,6 @@
       
       
 
-      .landing-logo-container{
-        background-color: var(--black);
-        display: flex;
-        align-items: center;
-        height: 20vh;
-        margin: 1rem;
-        position: fixed;
-        left: 50px;
-        top: 0px;
-      }
-
-      .landing-logo-container img{
-        width: 10%;      
-      }
-
-      .landing-logo-container h2{
-        font-size: 30px;
-        padding: 0 20px;
-        color: var(--white);
-
-        
-      }
 
       .landing-txt-container{
 
