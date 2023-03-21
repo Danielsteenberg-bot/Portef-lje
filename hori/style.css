@@ -5,15 +5,11 @@
         --blue: #22A39F;
       }
 
-      @font-face{
-        font-family: pixelFont;
-        src: url(Raleway-VariableFont_wght.ttf);
-      }
+
       
       *{
         padding: 0;
         margin: 0;
-        font-family: pixelFont;
         box-sizing: border-box;
 
 

@@ -1,35 +1,71 @@
-    // Get the body element
-    var body = document.querySelector("body");
-      
-    
-    // Add a mousewheel event listener to the body
-    body.addEventListener("wheel", function(event) {
-      // Prevent the default behavior (vertical scrolling)
-      event.preventDefault();
-      
-      // Scroll horizontally by the amount of the mouse wheel delta
-      body.scrollLeft -= event.wheelDelta;
+let sections = [...document.querySelectorAll(".sections")];
+let slider = document.querySelector(".slider");
+
+let img = document.querySelectorAll("img");
+
+console.log(img)
+
+let sliderWidth;
+let imageWidth;
+let current = 0;
+let target = 0;
+let ease = 0.6;
+
+let isSmallScreen = window.innerWidth < 600;
+let scrollDirection = isSmallScreen ? 'vertical' : 'horizontal';
+
+window.addEventListener("resize", () => {
+  isSmallScreen = window.innerWidth < 600;
+  scrollDirection = isSmallScreen ? 'vertical' : 'horizontal';
+  init();
+});
+
+
+function lerp(start, end, t){
+  return start * (1-t) + end * t;
+}
+
+function setTransform(ele, transform){
+  ele.style.transform = transform;
+}
+
+function init(){
+  sliderWidth = slider.getBoundingClientRect()[scrollDirection === 'vertical' ? 'height' : 'width'];
+  imageWidth = sliderWidth / sections.length;
+  if (scrollDirection === 'vertical') {
+    document.body.style.height = `${sections.length * sliderWidth}px`;
+  } else {
+    document.body.style.height = '';
+  }
+
+  // observe all the sections for intersection with the viewport
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio < 0.55) {
+        console.log("out", entry.target);
+        entry.target.classList.add("fadeOut");
+        entry.target.classList.remove("fadeIn");
+
+
+      } else {
+        console.log("in", entry.target);
+        entry.target.classList.remove("fadeOut");
+        entry.target.classList.add("fadeIn");
+
+      }
     });
-      
-  // Get the container element
-  var container = document.querySelector(".parallax-container");
-      
-  // Get the layers
-  var layer1 = document.querySelector("#layer1");
-  var layer2 = document.querySelector("#layer2");
-  
-  // Set the speed of each layer
-  var layer1Speed = 2;
-  var layer2Speed = 1.5;
-  
-  // Listen for the scroll event
-  window.addEventListener("scroll", function() {
-    // Calculate the scroll position of each layer
-    var scrollPosition = window.pageYOffset;
-    var layer1Position = scrollPosition * layer1Speed;
-    var layer2Position = scrollPosition * layer2Speed;
-    
-    // Set the position of each layer
-    layer1.style.transform = "translateY(" + layer1Position + "px)";
-    layer2.style.transform = "translateY(" + layer2Position + "px)";
-  });
+  }, { threshold: 0.55 });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+function animate(){
+  current = parseFloat(lerp(current, target, ease)).toFixed(2);
+  target = scrollDirection === 'vertical' ? window.scrollY : current;
+  setTransform(slider, scrollDirection === 'vertical' ? `translateY(-${current}px)` : `translateX(-${current}px)`);
+  animateImages();
+  requestAnimationFrame(animate)
+}
+
+function animateImages(){
+  let ratio = current /

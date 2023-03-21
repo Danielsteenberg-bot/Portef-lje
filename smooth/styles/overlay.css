@@ -1,0 +1,92 @@
+
+.website-image {
+    position: relative;
+    width: 600px;
+    height: 500px;
+  }
+  
+  .website-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .website-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .website-image:hover .overlay {
+    opacity: 1;
+  }
+  
+  .website-image .overlay button {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .website-image .overlay button:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+  
+  .website-image .overlay .icons {
+    display: flex;
+  }
+  
+  .website-image .overlay .icons .circle{
+    background: #000;
+  }
+  
+  .website-image .overlay .icons .circle:hover{
+    background: white;
+  }
+  
+  .website-image .overlay .icons i {
+    color: #FFFFFF;
+    font-size: 60px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .website-image .overlay .icons i:hover {
+    transform: scale(1.2);
+  }
+  
+  p.overlay-para {
+    margin: 1rem;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  
+  .icons .cirlce{
+    width: 75px;
+    height: 75px;
+    font-size: 42px;
+  }
+  
+  .website-image h6{
+    font-size: 42px;
+  }
+  
+  .overlay-icons-header{
+    font-size: 32px;
+    padding-top: 2rem;
+  }
