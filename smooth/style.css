@@ -106,14 +106,15 @@ main{
 
 .tech-img-2{
   position: relative;
-  right: 10%;
+  right: 2%;
   height: 400px;
+  top: 42%;
 }
 .tech-img-1{
   height: 50%;
   position: relative;
-  right: -2%;
-  top: 20%;
+  right: 1%;
+  top: 5%;
 }
 
 .icon-container{
@@ -178,11 +179,75 @@ main{
 
 /* projekter */
 
+.project{
+  flex-direction: row;
+  width: 900px;
 
+}
+
+.projects.txt-wrapper.first {
+  position: relative;
+  bottom: 15%;
+}
+
+.projects-logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+  margin-right: 3rem;
+}
+
+img.project-icon {
+  width: 25%;
+  height: auto;
+}
+
+.spacer-projects{
+  height: 100px;
+  border: none;
+  border-left: 1.5px solid white;
+}
 
 @media only screen and (max-width: 600px) {
   body {
     overflow-y: scroll;
     overflow-x: hidden;
   }
+}
+
+
+.scroll-downs {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
 }
