@@ -23,7 +23,7 @@ main{
   position: absolute;
   top: 0;
   left: 0;
-  width: 10000px;
+  width: 11000px;
   height: 100%;
   transition: transform .6s  cubic-bezier(.25, .46, .45, .94);
 
@@ -191,6 +191,27 @@ main{
 }
 
 .projects-logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+  margin-right: 3rem;
+}
+
+img.about-icon {
+  width: 25%;
+  height: auto;
+}
+
+
+
+.about .txt-wrapper.first {
+  position: relative;
+  bottom: 15%;
+}
+
+.about-logo-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

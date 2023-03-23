@@ -20,8 +20,8 @@
     flex-direction: row;
     font-size: 16px;
     justify-content: space-between;
-    width: 100%;
-    max-width: 60rem;
+    width: 60%;
+    min-width: 40vw;
     color: var(--white);
     line-height: 140%;
     flex-wrap: row wrap;

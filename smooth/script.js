@@ -1,9 +1,11 @@
 let sections = [...document.querySelectorAll(".sections")];
 let slider = document.querySelector(".slider");
+let headers = document.querySelectorAll("h5")
+
+console.log(headers)
 
 let img = document.querySelectorAll(".ele");
 
-console.log(img)
 
 let sliderWidth;
 let imageWidth;
@@ -18,14 +20,13 @@ function lerp(start, end, t){
   return start * (1-t) + end * t;
 }
 
-/* function setTransform(ele, transform){
-  ele.style.transform = transform;
-} */
+
 
 function setTransform(ele, transform, axis = "x") {
   ele.style.transform = `translate${axis.toUpperCase()}(${transform})`;
 }
 
+let prevHeader = null;
 
 function init(){
   sliderWidth = slider.getBoundingClientRect().width;
@@ -38,19 +39,31 @@ function init(){
   document.body.style.height = `${sliderWidth - (window.innerWidth - window.innerHeight)}px`
 
   // observe all the sections for intersection with the viewport
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.intersectionRatio < 0.55) {
         console.log("out", entry.target);
         entry.target.classList.add("fadeOut");
         entry.target.classList.remove("fadeIn");
-
-
       } else {
         console.log("in", entry.target);
         entry.target.classList.remove("fadeOut");
         entry.target.classList.add("fadeIn");
 
+        // check if the header is in viewport
+        if (
+          entry.target.getBoundingClientRect().top >= 0 &&
+          entry.target.getBoundingClientRect().bottom <= window.innerHeight
+        ) {
+          // remove test class from the previous header if it exists
+          if (prevHeader !== null) {
+            prevHeader.classList.remove("test");
+          }
+          // add test class to the current header
+          entry.target.classList.add("test");
+          prevHeader = entry.target;
+        }
       }
     });
   }, { threshold: 0.55 });
@@ -58,7 +71,6 @@ function init(){
   sections.forEach(section => observer.observe(section));
   img.forEach(section => observer.observe(section));
 }
-
 
 
 function animate() {
