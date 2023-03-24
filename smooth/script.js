@@ -38,7 +38,25 @@ function init(){
   
   document.body.style.height = `${sliderWidth - (window.innerWidth - window.innerHeight)}px`
 
-  // observe all the sections for intersection with the viewport
+
+  
+  const headerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log("test");
+        entry.target.classList.add("nav-active")
+      }
+      else {
+        entry.target.classList.remove("nav-active");
+      }
+    });
+  }, { threshold: 0.55 });
+
+
+
+  
+  headers.forEach(header => headerObserver.observe(header));
+
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -50,20 +68,6 @@ function init(){
         console.log("in", entry.target);
         entry.target.classList.remove("fadeOut");
         entry.target.classList.add("fadeIn");
-
-        // check if the header is in viewport
-        if (
-          entry.target.getBoundingClientRect().top >= 0 &&
-          entry.target.getBoundingClientRect().bottom <= window.innerHeight
-        ) {
-          // remove test class from the previous header if it exists
-          if (prevHeader !== null) {
-            prevHeader.classList.remove("test");
-          }
-          // add test class to the current header
-          entry.target.classList.add("test");
-          prevHeader = entry.target;
-        }
       }
     });
   }, { threshold: 0.55 });
@@ -77,7 +81,8 @@ function animate() {
   current = parseFloat(lerp(current, target, ease)).toFixed(2);
   target = window.scrollY;
   if (window.innerWidth < 600) {
-    setTransform(slider, `${current}px`, "Y");
+    
+    setTransform( axis = "y",slider, `${current}px`, "y");
   } else {
     setTransform(slider, `-${current}px`);
   }
@@ -95,6 +100,11 @@ function animateImages() {
     } else {
       setTransform(image, `${intersectionRatioValue * 70}px`);
     }
+  });
+  img.forEach((image, idx) => {
+    intersectionRatioValue = ratio - idx * 0.7;
+    let parallaxAmount = intersectionRatioValue * 140 +4;
+    setTransform(image, `${parallaxAmount+4}px`);
   });
 }
 
