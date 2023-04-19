@@ -20,8 +20,7 @@
     flex-direction: row;
     font-size: 16px;
     justify-content: space-between;
-    width: 60%;
-    min-width: 40vw;
+    width: 40%;
     color: var(--white);
     line-height: 140%;
     flex-wrap: row wrap;
@@ -72,6 +71,29 @@
     display: block;
   }
 
+/* 
+  .fadeDown{
+    animation: fadeDown forwards 1s ease-in-out;
+  }
+  .fadeUp{
+    animation: fadeUp forwards 1s ease-in-out;
+  }
+
+  .fadeIn{
+    animation: fadeIn forwards 1s ease-in-out;
+  }
+  .fadeOut{
+    animation: fadeOut forwards 1s ease-in-out;
+  }
+
+  .fade{
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  .fadeBack{
+    opacity: 1;
+    transition: all 1s ease;
+  }
 
 
 
@@ -111,6 +133,6 @@
 
     }
   }
-
+ */
 
 

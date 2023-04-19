@@ -197,32 +197,11 @@
         opacity: 0;
       }
 
-      .fadeDown{
-        animation: fadeDown forwards 1s ease-in-out;
-      }
-      .fadeUp{
-        animation: fadeUp forwards 1s ease-in-out;
-      }
 
-      .fadeIn{
-        animation: fadeIn forwards 1s ease-in-out;
-      }
-      .fadeOut{
-        animation: fadeOut forwards 1s ease-in-out;
-      }
-
-      .fade{
-        opacity: 0;
-        transition: all 1s ease;
-      }
-      .fadeBack{
-        opacity: 1;
-        transition: all 1s ease;
-      }
 
       /* Keyframes */
 
-
+/* 
       @keyframes fadeDown {
         0%{
           opacity: 0;
@@ -282,3 +261,4 @@
         }
         
       }
+ */
