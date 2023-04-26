@@ -38,7 +38,9 @@ function init(){
   imageWidth = sliderWidth / sections.length;
   
   if (window.innerWidth < 600) {
-    document.body.style.overflowY = 'scroll';
+    // Redirect the user to a different URL
+    window.location.href = 'https://www.google.com/';
+    return;
   }
   
   document.body.style.height = `${sliderWidth - (window.innerWidth - window.innerHeight)}px`
@@ -82,12 +84,12 @@ function init(){
     entries.forEach(entry => {
       if (entry.intersectionRatio < 0.55) {
 /*         console.log("out", entry.target);
- */        /* entry.target.classList.add("fadeOut");
-        entry.target.classList.remove("fadeIn"); */
+ */        entry.target.classList.add("fadeOut");
+        entry.target.classList.remove("fadeIn");
       } else {
 /*         console.log("in", entry.target);
- */        /* entry.target.classList.remove("fadeOut");
-        entry.target.classList.add("fadeIn"); */
+ */        entry.target.classList.remove("fadeOut");
+        entry.target.classList.add("fadeIn");
       }
     });
   }, { threshold: 0.55 });
@@ -110,6 +112,8 @@ function animate() {
 }
 
 
+
+
 function animateImages() {
 /*   let ratio = current / imageWidth;
   let intersectionRatioValue;
@@ -127,6 +131,7 @@ function animateImages() {
     setTransform(image, `${parallaxAmount+10}px`);
   }); */
 }
+
 
 
 

@@ -1,7 +1,14 @@
+:root{
+  --black: #222222;
+  --white: #F3EFE0;
+  --grey: #434242;
+  --blue: #22A39F;
+}
+
 .landing-logo-container{
   display: flex;
   align-items: center;
-  height: 20vh;
+  height: 5vh;
   margin: 1rem;
   position: fixed;
   left: 50px;
@@ -27,7 +34,7 @@
   width: 40%;
   border-radius: 50px;
   position: fixed;
-  bottom: 70px;
+  bottom: 20px;
   left: 0;
   right: 0;
   margin: auto;
@@ -51,4 +58,60 @@
 .active {
   background-color: #4CAF50;
   color: white;
+}
+
+
+.scroll-downs {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width : 68px;
+  height: 105px;
+  margin: 1rem;
+}
+.mousey {
+  width: 6px;
+  padding: 10px 15px;
+  height: 45px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+
+
+@media only screen and (max-width: 600px) {
+.navbar{
+  width: 95%;
+}
+
+.landing-logo-container{
+  left: 25px;
+}
+
+.landing-logo-container img{
+  width: 15%;      
+}
+
+.landing-logo-container h2{
+  color: var(--white);
+}
 }

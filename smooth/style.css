@@ -50,14 +50,10 @@ main{
 .item h1{
   margin: 0;
   padding: 0;
-  display: flex;
-  width: 45%;
-  align-items: center;
-  font-size: 32px;
+  font-size: 42px;
   line-height: 140%;
   color: var(--white);
   position: relative;
-  margin: auto;
 }
 
 .item h2{
@@ -241,8 +237,10 @@ img.project-icon {
   .slider{
     position: absolute;
     top: 0;
+    display: flex;
+    flex-direction: column;
     left: 0;
-    width: 100%;
+    width: 6900px;
     height: 6900px;
     transition: transform .6s  cubic-bezier(.25, .46, .45, .94);
   
@@ -256,20 +254,13 @@ img.project-icon {
     flex-direction: column;
   }
   
-  .item{
-    position: relative;
-    width: 100%;
-    min-height: 1000px;
-    overflow: hidden;
-    display: flex;
-    margin: auto;
-  }
+
 }
 
 /* landing */
 
 .sections.first  {
-  width: 80vw;
+  width: 75vw;
   flex-direction: column;
   align-items: center;
 }
@@ -280,37 +271,3 @@ img.project-icon {
     align-items: center;
 }
 
-.scroll-downs {
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width : 68px;
-  height: 105px;
-  margin: 1rem;
-}
-.mousey {
-  width: 6px;
-  padding: 10px 15px;
-  height: 45px;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
-}
-.scroller {
-  width: 3px;
-  height: 10px;
-  border-radius: 25%;
-  background-color: #fff;
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-  animation-iteration-count: infinite;
-}
-@keyframes scroll {
-  0% { opacity: 0; }
-  10% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(15px); opacity: 0;}
-}
