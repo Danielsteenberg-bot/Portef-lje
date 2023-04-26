@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
+    <link rel="icon" type="image/x-icon" href="images/icon/icon.svg">
+
 
 
     <link rel="stylesheet" href="style.css">
@@ -20,9 +22,12 @@
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/last.css">
     <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/contact.css">
+
 
 
     <script defer src="script.js"></script>
+    <script defer src="contact.js"></script>
 
     
 </head>
@@ -37,7 +42,7 @@
 
   <nav>
       <div class="navbar">
-        <a class="nav-item " href="#home">Home</a>
+        <a class="nav-item" href="#">Home</a>
         <a class="nav-item" href="#technology">Teknologier</a>
         <a class="nav-item" href="#projects">Projekter</a>
         <a class="nav-item" href="#about">About</a>
@@ -48,7 +53,7 @@
     
     <div class="slider-inner">
       
-      <div class="item">
+      <div class="item first-item">
         <div class="sections first">
           <div class="landing-container">
             <h1>
@@ -139,7 +144,7 @@
         <div class="sections project">
           <div class="projects txt-wrapper first">
             <h5 id="projects" class="projects txt-head">Projekter:</h5>
-              <p class="projects txt-para">Her nogle af mine tidligere projekter, det er både bestående af "rigtige" projekter og skole projekter.</p>              
+              <p class="projects txt-para">Her nogle af mine tidligere projekter, det er både bestående af "rigtige" projekter og skole projekter. Jeg laver hele tiden en masse små projekter og der kommer også skoleopgaver hist og  her. </p>              
                 <div class="projects-logo-container">
                   <img class="project-icon" src="images/icons/km-logo.png" alt="KM træpleje's logo">
                     <div class="spacer-projects"></div>
@@ -258,37 +263,69 @@
           </div>              
       </div>      
     </div>
+    <img class="ele random-img-1" src="images/family.jpg">       
+    <img class="ele random-img-2" src="images/code-2.gif"> 
       <div class="item about-item">
         <div class="sections">
           <div class="about-txt-container">
               <div class="about txt-wrapper first">
                 <h5 id="about" class="about txt-head">Korte Facts:</h5>
-                <p class="about txt-para">Født og opvokset i det vestjydske for små 26 år siden <br> Stats: 3 søskende, ca 10 gode makkere, 3 fritids interesser. <br> Tidligere stillinger: Handicaphjælper, Hjælpelærer <br> Uddanelse: Gymnasial, Webudvikler, Software udvikler</p>                              
+                <p class="about txt-para">Født og opvokset i det vestjydske for små 26 år siden <br> Stats: 3 søskende, ca 10 gode makkere. <br> Tidligere stillinger: Handicaphjælper, Hjælpelærer <br> Uddanelse: Gymnasial, Webudvikler, Software udvikler <br> Lokation: 8800 Viborg <br> Ynglings drikke: Cola, Kaffe, Vand og Rødvin. <br>Igangværende projekt: Python + Machine learning.</p>                              
                     <div class="about-logo-container">
-                      <img class="project-icon" src="images/icons/km-logo.png" alt="KM træpleje's logo">
+                      <img class="project-icon" src="images/icons/logo_small.png" alt="KM træpleje's logo">
                         <div class="spacer-projects"></div>
-                            <img class="project-icon" src="images/icons/md-logo.png" alt="KM træpleje's logo">
+                            <img class="project-icon" style="width: 15%;" src="images/icon/icon.svg" alt="KM træpleje's logo">
                           <div class="spacer-projects"></div>
-                      <img class="project-icon" src="images/icons/hmedia-logo.png" alt="KM træpleje's logo">
+                      <img class="project-icon" src="images/icons/Mercantec-LOGO-bred-sort.png" alt="KM træpleje's logo">
                     </div>
-                </div>        
-              <img class="ele about-img-1" src="images/digselv.jpg" alt="">       
+                </div>
+              <img class="ele about-img-1" src="images/digselv.jpg" alt="">
           </div>             
         </div>
       </div>
-    <div class="item">
+    <div class="item last-item">
       <div class="sections last">
         <div class="last-main-container">
           <div class="header-container">
             <h2>Jeg glæder mig til samarbejdet</h2>
             <h6>Kontakt mig gerne</h6>
           </div>
+          <div class="contact-container">
+          <form class="form-index" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Navn:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Besked:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+          <div class="response">
+            <h3 class="over-checkmark-TXT">Tak for din Besked</h3>
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+            <h3 class="under-checkmark-TXT">Jeg vil kontakte dig hurtigst muligt</h3>
+        </div>
+          
+          
+          
           <div class="footer-container">
+
             <div class="contact">
               <h5>Contact</h5>
               <p>steenbergdaniel11@gmail.com</p>
               <p>(+45) 20 90 01 11</p>
             </div>
+
             <div class="adresse">
               <h5>Adresse</h5>
               <p>Klosterhaven 58</p>
@@ -296,10 +333,11 @@
             </div>
             
             <div class="follow">
-              <h5>Følg os Her</h5>
+              <h5>Følg mig Her</h5>
               <a href="">LinkedIn</a>
               <a href="">Instagram</a>
             </div>
+
           </div>
         </div>
         </div>

@@ -51,22 +51,19 @@
 
   .project-item-1{
     position: relative;
-    right: 4.6%;
+    right: 2.6%;
     bottom: 30%;
   }
-
-
-
   .project-item-2{
     position: relative;
-    right: 8%;
+    right: 5%;
     bottom: 25%;
     z-index: 2000;
   }
 
   .project-item-3{
     position: relative;
-    right: 14%;
+    right: 10%;
     top: 10%
   }
 
@@ -165,6 +162,22 @@
 
 .last{
   width: 1800px;
+}
+
+.random-img-1{
+  width: auto;
+  height: 400px;
+  position: relative;
+    right: 8%;
+    top: 10%;
+}
+
+.random-img-2{
+  position: relative;
+  width: auto;
+  height: 400px;
+    right: 5%;
+    top: 10%;
 }
 
 @media only screen and (max-width: 600px) {

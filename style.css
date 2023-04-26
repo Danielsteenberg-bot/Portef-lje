@@ -1,3 +1,10 @@
+:root{
+  --black: #222222;
+  --white: #F3EFE0;
+  --grey: #434242;
+  --blue: #22A39F;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -161,7 +168,7 @@ main{
   color: #7AB561 !important;
 }
 
-.fa-bootstrap {
+.fa-c {
   color: #5E3B7F !important;
 }
 
@@ -220,47 +227,15 @@ img.project-icon {
   height: auto;
 }
 
-/* .spacer-projects{
-  height: 100px;
-  border: none;
-  border-left: 1.5px solid white;
-} */
-
-@media only screen and (max-width: 600px) {
-
-  body {
-      overflow-y: scroll;
-      overflow-x: hidden;
-    }
-
-
-  .slider{
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    left: 0;
-    width: 6900px;
-    height: 6900px;
-    transition: transform .6s  cubic-bezier(.25, .46, .45, .94);
-  
-  }
-  
-  .slider-inner{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
-  
-
-}
 
 /* landing */
 
+.first-item{
+  width: 1400px;
+}
+
 .sections.first  {
-  width: 75vw;
+  width: 95vw;
   flex-direction: column;
   align-items: center;
 }

@@ -3,12 +3,13 @@
   --white: #F3EFE0;
   --grey: #434242;
   --blue: #22A39F;
+  --green: #4CAF50;
 }
 
 .landing-logo-container{
   display: flex;
   align-items: center;
-  height: 5vh;
+  height: 15vh;
   margin: 1rem;
   position: fixed;
   left: 50px;
@@ -34,7 +35,7 @@
   width: 40%;
   border-radius: 50px;
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   left: 0;
   right: 0;
   margin: auto;
@@ -101,10 +102,12 @@
 @media only screen and (max-width: 600px) {
 .navbar{
   width: 95%;
+  bottom: 20px;
 }
 
 .landing-logo-container{
   left: 25px;
+  height: 5vh;
 }
 
 .landing-logo-container img{

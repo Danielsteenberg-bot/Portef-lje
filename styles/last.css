@@ -5,9 +5,11 @@
     --blue: #22A39F;
   }
 
-  .last{
-    flex-direction: column;
+  .last-item{
+    width: 1250px;
   }
+
+
 
   .last-main-container{
     display: block;
@@ -26,7 +28,6 @@
     flex-wrap: row wrap;
     animation: fadeUp 0.6s linear forwards;
     animation-delay: 0.6s;
-
   }
 
   .footer-container h5{
@@ -134,5 +135,47 @@
     }
   }
 
+  @media only screen and (max-width: 600px) {
+    .footer-container{
+      height: 100vh;
+      flex-direction: column;
+      justify-content:  center;
+        display: flex;
+        font-size: 22px;
+        width: 100%;
+        color: var(--white);
+        line-height: 140%;
+        animation: fadeUp 0.6s linear forwards;
+        animation-delay: 0.6s;
+      
+    }
+
+    .contact , .follow, .adresse{
+      align-items: center;
+  
+    }
+
+    .form-row {
+      display: flex;
+      margin-bottom: 1rem;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+  }
+
+  .form-group{
+    width: 90%;
+  }
+
+  .header-container{
+    width: 100%;
+  }
+
+  .header-container h6{
+    text-align: center;
+  }
+  
+
+  }
 
 
